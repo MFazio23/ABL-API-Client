@@ -1,7 +1,6 @@
 package dev.mfazio.abl.api.services
 
 import com.squareup.moshi.Moshi
-import dev.mfazio.abl.api.AndroidBaseballLeagueService
 import dev.mfazio.abl.api.adapters.moshi.MoshiLocalDateAdapter
 import dev.mfazio.abl.api.adapters.moshi.MoshiLocalDateTimeAdapter
 import dev.mfazio.abl.api.factories.DateTimeQueryConverterFactory

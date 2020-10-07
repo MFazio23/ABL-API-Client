@@ -1,4 +1,4 @@
-package dev.mfazio.abl.api
+package dev.mfazio.abl.api.services
 
 import dev.mfazio.abl.api.models.*
 import retrofit2.http.GET
