@@ -14,6 +14,7 @@ dependencies {
     implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
     api("com.squareup.retrofit2:retrofit:$retrofitVersion")
+    api("com.squareup.retrofit2:converter-moshi:$retrofitVersion")
 
 
     testImplementation("org.jetbrains.kotlin:kotlin-test")

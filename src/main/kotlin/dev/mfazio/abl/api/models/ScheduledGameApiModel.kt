@@ -1,13 +1,16 @@
 package dev.mfazio.abl.api.models
 
+import java.time.LocalDateTime
+
 data class ScheduledGameApiModel(
     val gameStatus: ScheduledGameStatusApiModel,
+    val gameStartTime: LocalDateTime,
     val homeTeam: ScheduledGameTeamApiModel,
     val awayTeam: ScheduledGameTeamApiModel,
-    val inning: Int,
-    val isTopOfInning: Boolean,
-    val outs: Int = 0,
-    val occupiedBases: OccupiedBasesApiModel
+    val inning: Int? = null,
+    val isTopOfInning: Boolean = false,
+    val outs: Int? = null,
+    val occupiedBases: OccupiedBasesApiModel? = null
 )
 
 data class ScheduledGameTeamApiModel(
