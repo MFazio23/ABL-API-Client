@@ -29,19 +29,18 @@ interface AndroidBaseballLeagueService {
         @Query("isOutfielder") isOutfielder: Boolean? = null
     ): List<PlayerApiModel>
 
-    //TODO: Change this to a PlayerWithStatsApiModel with batting/pitching stats, but null if not applicable
     @GET("players/{playerId}")
     suspend fun getSinglePlayer(
         @Path("playerId") playerId: String,
-        @Query("filterDate") filterDate: LocalDate? = null
-    ): PlayerApiModel
+        @Query("currentDate") currentDate: LocalDate? = null
+    ): BoxScoreItemsApiModel
 
     @GET("standings")
-    suspend fun getStandings(@Query("filterDate") filterDate: LocalDate? = null): List<TeamStandingApiModel>
+    suspend fun getStandings(@Query("currentDate") currentDate: LocalDate? = null): List<TeamStandingApiModel>
 
     @GET("stats/batting")
     suspend fun getBattingStats(
-        @Query("date") date: LocalDate? = LocalDate.now(),
+        @Query("currentDate") currentDate: LocalDate? = null,
         @Query("pageNumber") pageNumber: Int? = null,
         @Query("pageSize") pageSize: Int? = null,
         @Query("sortStat") sortStat: String? = null,
@@ -52,7 +51,7 @@ interface AndroidBaseballLeagueService {
 
     @GET("stats/pitching")
     suspend fun getPitchingStats(
-        @Query("date") date: LocalDate? = LocalDate.now(),
+        @Query("currentDate") currentDate: LocalDate? = null,
         @Query("pageNumber") pageNumber: Int? = null,
         @Query("pageSize") pageSize: Int? = null,
         @Query("sortStat") sortStat: String? = null,
