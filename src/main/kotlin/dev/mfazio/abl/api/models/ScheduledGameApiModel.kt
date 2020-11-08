@@ -3,6 +3,7 @@ package dev.mfazio.abl.api.models
 import java.time.LocalDateTime
 
 data class ScheduledGameApiModel(
+    val gameId: String,
     val gameStatus: ScheduledGameStatusApiModel,
     val gameStartTime: LocalDateTime,
     val homeTeam: ScheduledGameTeamApiModel,
