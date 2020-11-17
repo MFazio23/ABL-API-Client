@@ -7,7 +7,7 @@ import dev.mfazio.abl.api.factories.DateTimeQueryConverterFactory
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
 
-fun getDefaultABLService(baseUrl: String = "https://android-baseball-league.azurewebsites.net/api/"): AndroidBaseballLeagueService {
+fun getDefaultABLService(baseUrl: String = "https://abl.mfazio.dev/api/"): AndroidBaseballLeagueService {
     val moshi = Moshi.Builder()
         .add(MoshiLocalDateAdapter())
         .add(MoshiLocalDateTimeAdapter())
