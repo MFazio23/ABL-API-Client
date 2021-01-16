@@ -9,6 +9,7 @@ data class PitcherBoxScoreItemApiModel(
     val bats: HandApiModel = HandApiModel.Right,
     val throws: HandApiModel = HandApiModel.Right,
     val position: PositionApiModel = PositionApiModel.Unknown,
+    val boxScoreLastName: String?,
     val games: Int,
     val gamesStarted: Int,
     val outs: Int,

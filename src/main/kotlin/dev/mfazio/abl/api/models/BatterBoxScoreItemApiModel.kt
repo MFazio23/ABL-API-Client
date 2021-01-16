@@ -9,6 +9,7 @@ data class BatterBoxScoreItemApiModel(
     val bats: HandApiModel = HandApiModel.Right,
     val throws: HandApiModel = HandApiModel.Right,
     val position: PositionApiModel = PositionApiModel.Unknown,
+    val boxScoreLastName: String?,
     val games: Int,
     val plateAppearances: Int,
     val atBats: Int,
