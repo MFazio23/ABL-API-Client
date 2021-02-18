@@ -2,7 +2,6 @@ plugins {
     `maven-publish`
     id("org.jetbrains.kotlin.jvm") version "1.4.21"
     `java-library`
-    id("com.jfrog.bintray") version "1.8.5"
 }
 
 repositories {
@@ -10,7 +9,7 @@ repositories {
 }
 
 group = "dev.mfazio.abl"
-version = "1.0.8"
+version = "1.1.0"
 
 val artifactName = project.name
 val artifactGroup = project.group.toString()
@@ -28,21 +27,6 @@ dependencies {
 
     testImplementation("org.jetbrains.kotlin:kotlin-test")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit")
-}
-
-bintray {
-    user = System.getenv("bintrayUser")
-    key = System.getenv("bintrayKey")
-    publish = true
-
-    pkg.apply {
-        repo = "android-baseball-league"
-        name = artifactName
-        userOrg = "mfazio23"
-        vcsUrl = "https://github.com/MFazio23/ABL-API-Client"
-        setLicenses("Apache-2.0")
-        setPublications(publicationName)
-    }
 }
 
 val sourcesJar by tasks.creating(Jar::class) {
