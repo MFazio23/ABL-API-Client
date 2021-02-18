@@ -1,6 +1,6 @@
 plugins {
     `maven-publish`
-    id("org.jetbrains.kotlin.jvm") version "1.4.21"
+    id("org.jetbrains.kotlin.jvm") version "1.4.30"
     `java-library`
 }
 
@@ -9,7 +9,7 @@ repositories {
 }
 
 group = "dev.mfazio.abl"
-version = "1.1.0"
+version = "1.1.1"
 
 val artifactName = project.name
 val artifactGroup = project.group.toString()
